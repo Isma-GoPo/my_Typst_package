@@ -1,5 +1,5 @@
 #import "utils.typ"
-#import "config.typ": *
+#import "constants.typ": *
 
 // ------------------------
 // PREAMBLE
@@ -7,15 +7,20 @@
 
 // ---STYLING---
 
-#let document_style(it) = {
+#let document_style(
+    config_dict: none,
+    it
+  ) = {
+  let config = config(config_dict: config_dict)
+
   set text(font: "Libertinus Serif")
   set text(lang: "es")
 
   set document(
-    author: author,
-    title: [#title_name],
-    date: date,
-    description: subject,
+    author: config.author,
+    title: [#config.title_name],
+    date: config.date,
+    description: config.subject,
   )
 
   // ---FORMATING---
@@ -27,7 +32,7 @@
       #grid(
         columns: (1fr, 3fr),
         align: (left, right),
-      )[_#(author)_][#title_name]
+      )[_#(config.author)_][#config.title_name]
       #align(center)[#line(length: 106%, stroke: 0.5pt)]
     ],
     //footer: rect(fill: aqua)[Footer],

@@ -13,7 +13,10 @@ This repository is meant to live inside another directory.
 
 ### Init
 1. Make the folder `./my_typst/` inside your project dict.
-2. Inside it, open and clone the git repo & Sync with GitHub
+2. Inside it, open and clone the git repo as a submodule:
+  - `git submodule add https://github.com/Isma-GoPo/my_Typst_package.git`
+  - If you want to move it, do it with `git mv`
+3. Add/Edit the `package/config.typ` file
 3. You are not able to edit this repo for concrete use. Use it as a library.
   - If I need to make it more general, just make it in a way all the repos can work in the same way
   - If I want to add future, make sure for committing the changes in this subdirectory.

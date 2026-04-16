@@ -1,34 +1,32 @@
-#import "config.typ": *
+#import "constants.typ": *
 
 // ------------------------
 // GRATER BLOCKS
 // ------------------------
 #let title_page(
-  title_name: title_name, 
-  subject: subject, 
-  author: author, 
-  date_display: date_display,
+  config_dict: none,
 ) = page(
   header: [], /*Empty header for title*/
   numbering: none,
   margin: (left: 4cm, right: 4cm, bottom: 3cm),
   fill: luma(245),
 )[
+  #let config = config(config_dict: config_dict)
   #line(length: 200%, stroke: (thickness: 4pt /*paint: blue*/))
 
   #align(horizon + left)[
     #text(size: 24pt, weight: "bold")[
-      #title_name
+      #config.title_name
     ]
 
     #text(size: 14pt)[
-      #subject
+      #config.subject
 
-      _#(author)_
+      _#(config.author)_
     ]
   ]
 
-  #align(bottom + left)[#text(size: 14pt)[#date_display]]
+  #align(bottom + left)[#text(size: 14pt)[#date_display(config.date)]]
 ]
 
 #let appendix_style(body) = {
