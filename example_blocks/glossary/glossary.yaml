@@ -1,0 +1,21 @@
+inductor:
+  short: Inductor
+  description: En el contexto del departamento, inductor hace referencia al conjunto de elementos que permiten calentar la pieza a través de la corriente. Suele estar formada por una bobina, concentradores para el campo mágnetico.
+bobina:
+  short: Bobina
+  description: En el contexto del departamento, bobina hace referencia únicamente a la pieza de cobre del inductor. Sin embargo, dada la filosofía del inductor en este proyecto, inductor y bobina se usarán como sinónimos en la mayoría de situaciones.
+philosphy:
+  short: Filosofía (de inductor)
+  description: En el contexto de la empresa, la palabra filosofía referida a inductores se refiere a la forma/geometría general que sigue el inductor. En el contexto de estre proyecto, distintas filosofías sería un inductor que calentase desde dentro del estator frente a uno que rodease la pieza por fuera a cierta equidistancia
+MEF:
+  short: MEF
+  description: Método de Elementos Finitos. Es un método numérico para resolver problemas de ingeniería y física matemática. Relevante al ser aplicado en el software Cenos Induction Heating Simulation usado en el departamento.
+step:
+  short: step
+  description: Paso o incremento de tiempo usado para la discretización de la simulación. El término en inglés es el usado en el departamento para referirse a este concepto.
+gap:
+  short: gap
+  description: Distancia mínima entre partes del inductor y la pieza. Es la una medida crítica que asegura que no haya contacto formando un arco eléctrico. El término en inglés es el usado en el departamento para referirse a este concepto.
+tabla-potencia:
+  short: Tabla de potencia
+  description: Tabla que define una rampa de potencia en función del intervalo del tiempo pasada al software de simulación.
