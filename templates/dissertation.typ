@@ -1,10 +1,11 @@
 #import "../init.typ": *
+#let config_dict = ( )
 
 // ------------------------
 // PREAMBLE
 // ------------------------
-#title_page()
-#show: document_style
+#title_page(config_dict: config_dict)
+#show: it => document_style(config_dict: config_dict, it)
 
 // ------------------------
 // ABSTRACT AND ACKNOWLEGEMENTS PAGES
