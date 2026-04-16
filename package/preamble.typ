@@ -57,26 +57,11 @@
   }
 
   // show ref: it => [[#it]] //reference between "[]" (but the problem is that there are some rendered with "()")
-  
-  show text: it => { 
-    let pattern = "\[([^\]]+)\]\(([^\)]+)\)"
-    
-    let m = it.text.match(regex(pattern))
-    
-    if m != none {
-      // m.captures.at(0) is the label [text]
-      // m.captures.at(1) is the URL (url)
-      link(m.captures.at(1))[#m.captures.at(0)]
-    } else {
-      it
-    }
-  }
 
   set math.equation(numbering: "(1)")
 
   show link: underline // Underlined urls
   show link: set text(fill: blue, weight: 700) // Blue and bold urls
-
 
   it
 }
