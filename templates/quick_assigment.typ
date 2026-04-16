@@ -1,7 +1,4 @@
-#import "../my_typst/preamble.typ": document_style
-#import "../my_typst/config.typ": *
-#import "../my_typst/utils.typ": *
-#import "../my_typst/styling.typ": *
+#import "../init.typ": *
 
 // ------------------------
 // PREAMBLE
