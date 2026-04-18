@@ -36,7 +36,11 @@
       inset: 10pt, 
       radius: 2pt,
     )[
-      *#message*:\ 
+      #set par(first-line-indent: (amount: 0em))
+      *#message*
+      #v(-3pt)
+
+      #show: it => align(left, it)
       #it
     ]
   ]
