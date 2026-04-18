@@ -1,8 +1,11 @@
-// ---CUSTOM FUNCTIONS---
-  // Common
+// ------------------------
+// Symbols-like
+// ------------------------
 #let hline() = line(length: 100%, stroke: 1pt + gray)
 
-
+// ------------------------
+// Embeding
+// ------------------------
 #let embed_pdf(path) = page(margin: (x: 0cm, y: 0cm), header: [], numbering: none)[
   #image(path, height: 100%, width: 100%) 
 ]
@@ -21,6 +24,7 @@
   }
 }
 
-
-// Math
+// ------------------------
+// MATHS
+// ------------------------
 #let det(..content) = math.mat(..content, delim: "|")
