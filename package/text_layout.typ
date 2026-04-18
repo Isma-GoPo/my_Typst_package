@@ -28,7 +28,7 @@
 // TEXT IN BOXES / CALLOUTS
 // ------------------------
 
-#let callout_centered(message, colour, it) = {
+#let post_it(message, colour: white, it) = {
   //set text(fill: black, weight: "bold")
   align(center)[
     #box(
@@ -42,15 +42,15 @@
   ]
 }
 
-#let ToDo(it) = callout_centered(
-  rgb("#b00dc944"),
+#let ToDo(it) = post_it(
   [TO-DO],
+  colour: rgb("#b00dc944"),
   it
 )
 
-#let Doubt(it) = callout_centered(
-  rgb("#f8f800"),
+#let Doubt(it) = post_it(
   [DOUBT],
+  colour: rgb("#f8f800"),
   it
 )
 
