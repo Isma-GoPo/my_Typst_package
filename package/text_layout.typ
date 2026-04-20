@@ -58,6 +58,21 @@
   it
 )
 
+#let Correction(it) = post_it(
+  [CORRECTION],
+  colour: rgb("#d588ff"),
+  it
+)
+
+#let Comment(it) = post_it(
+  text(size: 8pt, fill: gray)[COMMENT],
+  colour: rgb("#f8f8f8"),
+  {
+    set text(fill: gray)
+    it
+  }
+)
+
 // ------------------------
 // MISCELLANEOUS
 // ------------------------
