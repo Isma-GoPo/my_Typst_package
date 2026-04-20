@@ -1,0 +1,7 @@
+[package]
+name = "isma"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Ismael-GoPo"]
+license = "GPL-3.0"
+description = "My custom package"

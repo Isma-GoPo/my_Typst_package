@@ -12,6 +12,13 @@ Don't pretent it to be a well-implemented package, it isn't.
 This repository is meant to live inside another directory. 
 
 ### Init
+#### As Typst package
+1. Inside `%APPDATA%` directory create: `%APPDATA%/typst/package/local/<package_name:isma>/<version:0.1.0>`
+2. Inside this folder open and clone the git repo `git clone https://github.com/Isma-GoPo/my_Typst_package.git`
+3. Import as `#import "@local/isma:0.1.0" as isma`
+4. Create your `config.yaml` or `config` dict to use styling functions
+
+#### As a Git submodule
 1. Make the folder `./my_typst/` inside your project dict.
 2. Inside it, open and clone the git repo as a submodule:
   - `git submodule add https://github.com/Isma-GoPo/my_Typst_package.git`
@@ -26,7 +33,7 @@ This repository is meant to live inside another directory.
 Files in `./templates` and code in `./example_blocks` are meant to be copied outside the repository into your project. Use the template you wish and change it to be your `main.typ` file. 
 
 ## STRUCTURE
-- `package/` contains the imported typst modules for `init.typ`
+- `src/` contains the imported typst modules for `init.typ`
 - `assets/` contains the needed assets for the package
   - Do not add example assets
 - `templates` contains typst main files for you to copy in your project and use. As examples.
